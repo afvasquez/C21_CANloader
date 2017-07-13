@@ -1,0 +1,55 @@
+/*
+ * conf_bootloader.h
+ *
+ * Created: 6/28/2017 10:51:53 AM
+ *  Author: Andres Vasquez
+ */ 
+
+
+#ifndef CONF_BOOTLOADER_H_INCLUDED
+#define CONF_BOOTLOADER_H_INCLUDED
+
+#include "conf_board.h"
+
+#define APP_START_ADDRESS          0x00006000
+#define BOOT_LED		PIN_PA27
+#define BOOT_ACTIVITY	PIN_PA07
+#define BOOT_ERROR		PIN_PA28
+
+#define MOTOR_PIN_PWM	PIN_PA14
+#define MOTOR_PIN_AH	PIN_PA15
+#define MOTOR_PIN_BH	PIN_PA16
+#define MOTOR_PIN_CH	PIN_PA17
+#define MOTOR_PIN_AL	PIN_PA18
+#define MOTOR_PIN_BL	PIN_PA19
+#define MOTOR_PIN_CL	PIN_PA22
+
+#define CAN_SUBNET_NETWORK_REQUEST	((uint8_t) 0)
+#define CAN_SUBNET_BOOTLOADER		((uint8_t) 1)
+#define CAN_SUBNET_PARAMETER_SETUP	((uint8_t) 2)
+#define CAN_SUBNET_ZPDC_OPERATION	((uint8_t) 3)
+
+#define LED_ACTIVITY	PIN_PA17
+#define LED_WARNING		PIN_PA18
+#define LED_ERROR		PIN_PA19
+#define PIN_MOTOR_P1	PIN_PA08
+#define PIN_MOTOR_P2	PIN_PA09
+#define PIN_MOTOR_P3	PIN_PA10
+#define PIN_MOTOR_P4	PIN_PA14
+#define PIN_MOTOR_P5	PIN_PA15
+#define PIN_MOTOR_P6	PIN_PA16
+
+
+#define BOOT_USART_MODULE          SERCOM0
+#define BOOT_USART_BAUDRATE        115200
+#define BOOT_USART_MUX_SETTINGS    PINMUX_UNUSED
+#define BOOT_USART_PAD0            PINMUX_UNUSED
+#define BOOT_USART_PAD1            PINMUX_UNUSED
+#define BOOT_USART_GCLK_SOURCE     GCLK_GENERATOR_0
+
+#define APP_START_PAGE             (APP_START_ADDRESS / FLASH_PAGE_SIZE)
+
+/* DEBUG LED output enable/disable */
+#define DEBUG_ENABLE               false
+
+#endif /* CONF_BOOTLOADER_H_ */
